@@ -1,25 +1,33 @@
-// import this after install `@mdi/font` package
-import "@mdi/font/css/materialdesignicons.css";
+// plugins/vuetify.ts
 
+import "@mdi/font/css/materialdesignicons.css";
 import "vuetify/styles";
+
 import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
-
-// import defaults from "./vuetify/defaults";
-// import { themes } from "./vuetify/theme";
-const defaults = {};
-const themes = {};
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
     components,
     directives,
-    defaults,
+
     theme: {
       defaultTheme: "light",
-      themes,
+      themes: {
+        light: {
+          dark: false,
+          colors: {
+            background: "#F3F8F9",
+            surface: "#FFFFFF",
+            primary: "#10B981", // verde estilo FinanceApp
+            error: "#EF4444",
+            success: "#10B981",
+          },
+        },
+      },
     },
   });
+
   app.vueApp.use(vuetify);
 });

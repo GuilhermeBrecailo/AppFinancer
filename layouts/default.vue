@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    <LayoutHeader />
     <v-main>
       <slot />
     </v-main>
