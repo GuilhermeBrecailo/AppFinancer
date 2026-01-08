@@ -4,6 +4,7 @@
       class="flex w-50"
       :variant="route.path === '/' ? 'tonal' : 'flat'"
       :color="route.path === '/' ? 'green' : 'white'"
+      to="/"
     >
       <div
         class="w-100 text-center"
@@ -22,8 +23,9 @@
     </VCard>
     <VCard
       class="flex w-50"
-      :variant="route.path === '/start' ? 'tonal' : 'flat'"
-      :color="route.path === '/start' ? 'greens' : 'white'"
+      :variant="route.path === '/expenses' ? 'tonal' : 'flat'"
+      :color="route.path === '/expenses' ? 'green' : 'white'"
+      to="/expenses"
     >
       <div
         class="w-100 text-center"
@@ -42,8 +44,9 @@
     </VCard>
     <VCard
       class="flex w-50"
-      :variant="route.path === '/start' ? 'tonal' : 'flat'"
-      :color="route.path === '/start' ? 'greens' : 'white'"
+      :variant="route.path === '/invoice' ? 'tonal' : 'flat'"
+      :color="route.path === '/invoice' ? 'green' : 'white'"
+      to="/invoice"
     >
       <div
         class="w-100 text-center"
@@ -56,14 +59,15 @@
       >
         <div class="d-flex flex-col align-center ma-auto">
           <Receipt size="20" class="my-auto" />
-          <span class="nav-label ma-auto ml-1">Gastos</span>
+          <span class="nav-label ma-auto ml-1">Contas</span>
         </div>
       </div>
     </VCard>
     <VCard
       class="flex w-50"
-      :variant="route.path === '/start' ? 'tonal' : 'flat'"
-      :color="route.path === '/start' ? 'greens' : 'white'"
+      :variant="route.path === '/credit-cards' ? 'tonal' : 'flat'"
+      :color="route.path === '/credit-cards' ? 'green' : 'white'"
+      to="/credit-cards"
     >
       <div
         class="w-100 text-center"
@@ -76,14 +80,15 @@
       >
         <div class="d-flex flex-col align-center ma-auto">
           <CreditCard size="20" class="my-auto" />
-          <span class="nav-label ma-auto ml-1">Gastos</span>
+          <span class="nav-label ma-auto ml-1">Cartões</span>
         </div>
       </div>
     </VCard>
     <VCard
       class="flex w-50"
-      :variant="route.path === '/start' ? 'tonal' : 'flat'"
-      :color="route.path === '/start' ? 'greens' : 'white'"
+      :variant="route.path === '/import' ? 'tonal' : 'flat'"
+      :color="route.path === '/import' ? 'green' : 'white'"
+      to="/import"
     >
       <div
         class="w-100 text-center"
@@ -96,7 +101,7 @@
       >
         <div class="d-flex flex-col align-center ma-auto">
           <Upload size="20" class="my-auto" />
-          <span class="nav-label ma-auto ml-1">Gastos</span>
+          <span class="nav-label ma-auto ml-1">Importar</span>
         </div>
       </div>
     </VCard>

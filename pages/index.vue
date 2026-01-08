@@ -1,41 +1,39 @@
 <template>
-  <v-container>
-    <div class="d-flex flex-col gap-3">
-      <dashboard-titile />
-      <dashboard-card
-        :title="currentBalance.title"
-        :icon="currentBalance.icon"
-        :current="currentBalance.current"
-        :income="currentBalance.income"
-        :subtitle="currentBalance.subtitle"
-        :to="currentBalance.to"
-      />
-      <dashboard-card
-        :title="totalExpenses.title"
-        :icon="totalExpenses.icon"
-        :current="totalExpenses.current"
-        :income="totalExpenses.income"
-        :subtitle="totalExpenses.subtitle"
-        :to="totalExpenses.to"
-      />
-      <dashboard-card
-        :title="perOfIncomeSpent.title"
-        :icon="perOfIncomeSpent.icon"
-        :current="perOfIncomeSpent.current"
-        :income="perOfIncomeSpent.income"
-        :subtitle="perOfIncomeSpent.subtitle"
-        :to="perOfIncomeSpent.to"
-      />
-      <dashboard-card
-        :title="activeCards.title"
-        :icon="activeCards.icon"
-        :current="activeCards.current"
-        :income="activeCards.income"
-        :subtitle="activeCards.subtitle"
-        :to="activeCards.to"
-      />
-    </div>
-  </v-container>
+  <div class="d-flex flex-col gap-3">
+    <utils-titile title="DashBoard" subtitle="Visão Geral das suas finanças" />
+    <dashboard-card
+      :title="currentBalance.title"
+      :icon="currentBalance.icon"
+      :current="currentBalance.current"
+      :income="currentBalance.income"
+      :subtitle="currentBalance.subtitle"
+      :to="currentBalance.to"
+    />
+    <dashboard-card
+      :title="totalExpenses.title"
+      :icon="totalExpenses.icon"
+      :current="totalExpenses.current"
+      :income="totalExpenses.income"
+      :subtitle="totalExpenses.subtitle"
+      :to="totalExpenses.to"
+    />
+    <dashboard-card
+      :title="perOfIncomeSpent.title"
+      :icon="perOfIncomeSpent.icon"
+      :current="perOfIncomeSpent.current"
+      :income="perOfIncomeSpent.income"
+      :subtitle="perOfIncomeSpent.subtitle"
+      :to="perOfIncomeSpent.to"
+    />
+    <dashboard-card
+      :title="activeCards.title"
+      :icon="activeCards.icon"
+      :current="activeCards.current"
+      :income="activeCards.income"
+      :subtitle="activeCards.subtitle"
+      :to="activeCards.to"
+    />
+  </div>
 </template>
 
 <script setup>
