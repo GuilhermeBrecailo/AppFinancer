@@ -1,7 +1,7 @@
 <template>
   <v-card class="card">
     <div class="d-flex align-center justify-between">
-      <p class="title">title</p>
+      <p class="title">{{ title }}</p>
       <div class="d-flex align-center gap-2">
         <v-btn variant="tonal" color="blue" icon elevation="0" class="btn">
           <Pencil
@@ -13,24 +13,35 @@
     </div>
     <div class="d-flex align center justify-between">
       <div class="d-flex flex-col gap-2">
-        <p>02/09/2003</p>
-        <div>
-          <v-chip color="green" class="chip" variant="tonal">
-            <p>categorias</p>
-          </v-chip>
+        <p class="time">{{ date }}</p>
+
+        <div class="d-flex gap-1">
+          <div v-for="category in catogorys" :key="category">
+            <v-chip color="green" class="chip" variant="tonal">
+              <p>{{ category }}</p>
+            </v-chip>
+          </div>
         </div>
       </div>
-      <div>
-        <p>value</p>
+      <div class="d-flex align-center jutify-center">
+        <p class="price">R$ {{ price }}</p>
       </div>
     </div>
-    <div>tags</div>
   </v-card>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { Pencil } from "lucide-vue-next";
 import { Trash2 } from "lucide-vue-next";
+
+interface Props {
+  title: string;
+  date: number;
+  income: number;
+  catogorys: string[];
+  price: string;
+}
+const props = defineProps<Props>();
 </script>
 
 <style scoped>
@@ -41,7 +52,6 @@ import { Trash2 } from "lucide-vue-next";
   background: #ffffff;
   overflow: hidden;
   transition: box-shadow 0.25s ease, transform 0.25s ease;
-  cursor: pointer;
 }
 .title {
   font-size: 20px;
@@ -57,5 +67,13 @@ import { Trash2 } from "lucide-vue-next";
   justify-content: center;
   width: 100px;
   height: 30px;
+}
+.price {
+  font-size: 20px;
+  font-weight: 600;
+  color: red;
+}
+.time {
+  font-size: 14px;
 }
 </style>

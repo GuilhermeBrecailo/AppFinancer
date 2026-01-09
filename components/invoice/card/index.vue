@@ -1,17 +1,19 @@
 <template>
-  <div class="d-flex flex-col gap-3">
-    <div class="d-flex align-center justify-between">
-      <UtilsTitile
-        title="Contas a Pagar"
-        subtitle="Gerencie os pagamentos das suas contas mensais"
-      />
-    </div>
-    <div>
-      <InvoiceCard />
-    </div>
-  </div>
+  <v-card class="card">
+    <v-row>
+      <v-col cols="1" class="d-flex align-center justify-center">
+        <Receipt size="40" />
+      </v-col>
+      <v-col>
+        <div>
+          <p class="title">Total do Mês</p>
+          <p class="price">R$ 2,00</p>
+          <p class="subtitle">1 contas</p>
+        </div>
+      </v-col>
+    </v-row>
+  </v-card>
 </template>
-
 <script setup>
 import {
   LayoutDashboard,

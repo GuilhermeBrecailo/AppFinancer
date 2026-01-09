@@ -11,6 +11,7 @@
           placeholder="Chips"
           hide-details
           density="compact"
+          base-color="#c9c9c9"
           variant="outlined"
         ></v-select>
       </v-col>
@@ -21,11 +22,12 @@
           placeholder="Chips"
           hide-details
           density="compact"
+          base-color="#c9c9c9"
           variant="outlined"
         ></v-select>
       </v-col>
       <v-col cols="3" class="total d-flex align-center jutify-center">
-        <p>Total: <span>R$ 2,00</span></p>
+        <p>Total: <span class="span">R$ 2,00</span></p>
       </v-col>
     </v-row>
   </v-card>
@@ -47,10 +49,11 @@ const value = shallowRef(["foo", "bar", "fizz", "buzz"]);
   background: #ffffff;
   overflow: hidden;
   transition: box-shadow 0.25s ease, transform 0.25s ease;
-  cursor: pointer;
 }
 .total {
   font-size: 18px;
+}
+.span {
   font-weight: 600;
 }
 </style>
